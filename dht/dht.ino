@@ -59,7 +59,7 @@ void displayBinary(double num) {
   bool fraction[4];
 
   for (int i = 0; i < 6; i++) {
-    integer[i] = (int(num) >> i) & 1;
+    integer[i] = int(num) & (1 << i);
   }
 
   for(int i = 0; i < 4; i++) {
